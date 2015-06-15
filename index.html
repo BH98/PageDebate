@@ -1,0 +1,73 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>PageDebate | ALPHA</title>
+		<script src="myscripts.js"> </script> 
+		<script src="components/bower_components/webcomponentsjs/webcomponents-lite.min.js"> </script> <!-- GOOGLE POLYMER -->
+		<script src="toastr/toastr-master/toastr.js"> </script> <!-- TOASTR -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"> </script> <!-- JQUERY -->
+		<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"> </script> <!-- BOOTSTRAP -->
+		<script src="charts/Chart.js-master/Chart.js"></script> <!-- CHARTS -->
+
+
+	    <link rel="import" href="components/bower_components/paper-button/paper-button.html"> <!-- GOOGLE POLYMER DEPENDENCIES -->
+	    <link rel="import" href="components/bower_components/paper-input/paper-input.html"> <!-- GOOGLE POLYMER DEPENDENCIES -->
+
+	    <link rel="stylesheet" type="text/css" href="stylesheet.css"> <!-- CUSTOM STYLESHEET -->
+	    <link href="toastr/toastr-master/toastr.css" rel="stylesheet"> <!-- TOASTR -->
+	    <!-- FONTS -->
+	    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> <!-- GOOGLE FONTS IMPORT-->
+	</head>
+	<body>
+	<!-- START LOAD SCRIPT -->
+	<script>
+	function signUp() {
+		el = document.getElementById("signUpOverlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+	</script>
+
+		<script>
+	function logIn() {
+		el = document.getElementById("logInOverlay");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+	</script>
+	<!-- END LOAD SCRIPT-->
+
+	<div class="left-sidebar">
+		<div class="content">
+			<center>
+				<paper-button raised ID="create" onclick="signUp()"> Sign up </paper-button>
+				<paper-button raised onclick="logIn()"> Login </paper-button>
+				<!-- LOGIN ANNOUNCEMENT-->
+				<p style="color: red;"> Login and sign up are closed. </p>
+				<!-- BEGIN SIGN UP OVERLAY-->
+				<div id="signUpOverlay">
+    				<div>
+          				<p>Hold up! Sign up isn't open right now.</p>
+     				</div>
+				</div>	
+				<!-- END SIGN UP OVERLAY -->
+				<!-- BEGIN LOGIN OVERLAY -->
+				<div id="logInOverlay">
+    				<div>
+          				<p>Hold up! You can't login right now.</p>
+          				<br>
+          				<paper-input label="Username:" error-message="Invalid input!"></paper-input>
+     				</div>
+				</div>	
+				<!-- END LOGIN OVERLAY-->
+			</center>
+		</div>
+	</div>
+	<div class="main_body">
+		<div class="main_body_content">
+		<center><h1>Welcome to PageDebate</h1></center>
+		<hr>
+		<p>Welcome to the new premier debating site - PageDebate! Write policies, complete your very own manifesto, vote on policies and much more. Do you think you've got what it takes to be a top politician? We'll soon find out.</p>
+	</div>
+	</div>
+
+	</body>
+</html>
