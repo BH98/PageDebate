@@ -27,9 +27,10 @@ body {
 
 .main_body {
 	position: relative;
-	left: 8%;
+	left: 20%;
 	top: 20%;
 	min-height: 100%;
+	width: 75%;
 }
 
 .main_body_content {
@@ -89,6 +90,16 @@ body {
 	background-color: #3f51b5;
 	border-radius: 10px;
 	color: #d1c4e9;
+}
+
+#submitButton {
+	background-color: #42a5f5;
+}
+
+.OverlayStyle {
+	background-color: #1de9b6;
+	border-color: #00bfa5;
+	color: #004d40;
 }
 
 font-family: 'Lato', sans-serif;

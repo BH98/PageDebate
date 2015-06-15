@@ -51,11 +51,15 @@
 				<!-- END SIGN UP OVERLAY -->
 				<!-- BEGIN LOGIN OVERLAY -->
 				<div id="logInOverlay">
-    				<div>
+				<paper-material elevation="5">
+    				<div class="OverlayStyle">
           				<p>Hold up! You can't login right now.</p>
           				<br>
-          				<paper-input label="Username:" error-message="Invalid input!"></paper-input>
+          				<paper-input label="Username:" error-message="Is this correct?"></paper-input>
+          				<paper-input label="Password:" error-message="Is this correct?" type="password"></paper-input>
+          				<paper-button raised id="submitButton"> Login </paper-button>
      				</div>
+     			</paper-material>
 				</div>	
 				<!-- END LOGIN OVERLAY-->
 			</center>
@@ -74,7 +78,7 @@
 			<!-- TWITTER WIDGET -->
             <a class="twitter-timeline"  href="https://twitter.com/BenHodgson98" data-widget-id="610472922105409538">Tweets by @BenHodgson98</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          
+          	<!-- END TWITTER WIDGET -->
 		</paper-material>
 
 	</div>
