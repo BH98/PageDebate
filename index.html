@@ -55,9 +55,11 @@
     				<div class="OverlayStyle">
           				<p>Hold up! You can't login right now.</p>
           				<br>
-          				<paper-input label="Username:" error-message="Is this correct?"></paper-input>
+          				<paper-input label="Username:" error-message="Is this correct?" pattern="[a-zA-Z]*" aria-describedby="paper-input-add-on-5339"></paper-input>
           				<paper-input label="Password:" error-message="Is this correct?" type="password"></paper-input>
           				<paper-button raised id="submitButton"> Login </paper-button>
+          				<br><br>
+          				<!-- ADD A "REMEMBER ME" CHECKBOX -->
      				</div>
      			</paper-material>
 				</div>	
