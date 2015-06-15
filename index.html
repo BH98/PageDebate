@@ -43,7 +43,7 @@
 				<!-- LOGIN ANNOUNCEMENT-->
 				<p style="color: red;"> Login and sign up are closed. </p>
 				<!-- BEGIN SIGN UP OVERLAY-->
-				<div id="signUpOverlay">
+				<div id="signUpOverlay" z="3">
     				<div>
           				<p>Hold up! Sign up isn't open right now.</p>
      				</div>
@@ -61,12 +61,22 @@
 			</center>
 		</div>
 	</div>
+	<!-- BEGIN MAIN BODY OF CONTENT - TO THE RIGHT OF THE CONTROL BAR -->
 	<div class="main_body">
 		<div class="main_body_content">
-		<center><h1>Welcome to PageDebate</h1></center>
+			<center><h1>Welcome to PageDebate</h1></center>
 		<hr>
-		<p>Welcome to the new premier debating site - PageDebate! Write policies, complete your very own manifesto, vote on policies and much more. Do you think you've got what it takes to be a top politician? We'll soon find out.</p>
-	</div>
+			<p>Welcome to the new premier debating site - PageDebate! Write policies, complete your very own manifesto, vote on policies and much more. Do you think you've got what it takes to be a top politician? We'll soon find out.</p>
+	
+		<paper-material elevation="5" class="card">
+			<h3>News</h3>
+			<hr>
+			<!-- TWITTER WIDGET -->
+            <a class="twitter-timeline"  href="https://twitter.com/BenHodgson98" data-widget-id="610472922105409538">Tweets by @BenHodgson98</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+		</paper-material>
+
 	</div>
 
 	</body>
