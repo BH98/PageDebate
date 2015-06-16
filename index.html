@@ -33,45 +33,6 @@
 		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
 	}
 	</script>
-
-<!-- USER LOGIN SCRIPT-->
-	<?php
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'users');
-define('DB_USER','root');
-define('DB_PASSWORD','CKwHRhkd7s');
-
-$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
-$db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
-/*
-$ID = $_POST['user'];
-$Password = $_POST['pass'];
-*/
-function SignIn()
-{
-session_start();   //starting the session for user profile page
-if(!empty($_POST['user']))   //checking the 'user' name which is from Sign-In.html, is it empty or have some text
-{
-	$query = mysql_query("SELECT *  FROM UserName where userName = '$_POST[user]' AND pass = '$_POST[pass]'") or die(mysql_error());
-	$row = mysql_fetch_array($query) or die(mysql_error());
-	if(!empty($row['userName']) AND !empty($row['pass']))
-	{
-		$_SESSION['userName'] = $row['pass'];
-		echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
-
-	}
-	else
-	{
-		echo "SORRY... YOU ENTERD WRONG ID AND PASSWORD... PLEASE RETRY...";
-	}
-}
-}
-if(isset($_POST['submit']))
-{
-	SignIn();
-}
-
-?>
 	<!-- END LOAD SCRIPT-->
 
 	<div class="left-sidebar">
@@ -94,11 +55,9 @@ if(isset($_POST['submit']))
     				<div class="OverlayStyle">
           				<p>Hold up! You can't login right now.</p>
           				<br>
-          				<form name="form1" method="post" action="checklogin.php">
-          					<paper-input label="Username:" error-message="Is this correct?" pattern="[a-zA-Z]*" name="user" type="text"></paper-input>
-          					<paper-input label="Password:" error-message="Is this correct?" type="password" name="pass"></paper-input>
-          					<paper-button raised id="submitButton" type="submit" name="Submit" value="Log-In"> Login </paper-button>
-          				</form>
+          				<paper-input label="Username:" error-message="Is this correct?" pattern="[a-zA-Z]*" aria-describedby="paper-input-add-on-5339"></paper-input>
+          				<paper-input label="Password:" error-message="Is this correct?" type="password"></paper-input>
+          				<paper-button raised id="submitButton"> Login </paper-button>
           				<br><br>
           				<!-- ADD A "REMEMBER ME" CHECKBOX -->
      				</div>
